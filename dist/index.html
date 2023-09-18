@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script" />
+    <script src="./index.js"></script>
+    
+</head>
+<body id="toggleDark" class="">
+    <nav class="bg-gray-800 w-screen fixed z-[100]">
+    <div class="mx-auto max-w-7x1 px-6">
+    <div class="relative flex h-16 items-center justify-between">
+
+        <!--Mobile menu-->
+        <div class="absolute inset-0 left-0 flex items-center sm:hidden">
+          <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover: text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          >
+            <span class="text-2xl">
+              <ion-icon name="menu-outline" onclick="menu(this)"></ion-icon>
+            </span>
+          </button>
+        </div>
+
+        <div class="flex flex-shrink-0 items-center ml-28">
+          <img class="block h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=500" alt="logo"/>
+          <h1 class="text-white flex items-center justify-center px-2 text-2x1 font-medium">tailwindcss</h1>
+        </div>
+        <div class="absolute right-0">
+        <div class="flex space-x-4">
+            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Testimonials</a>
+            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Price</a>
+            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+            <!-- Color mode button -->
+            <button class="text-center text-3xl text-gray-500 hover:text-gray-300 hover:cursor-pointer">
+              <ion-icon name="moon" onclick="toggleMode(this)"></ion-icon>
+            </button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="sm:hidden w-screen fixed bg-gray-800 opacity-0 transition ease-in duration-200">
+
+      <div class="space-y-1 px-2 pt-2 pb-3">
+        <a href="javascript:void(0)" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" onclick="toHome()">Home</a>
+        <a href="javascript:void(0)" class="hover:bg-gray-700 hover:text-white text-gray-300 block px-3 py-2 rounded-md text-base font-medium" onclick="toTestimonials()">Testimonials</a>
+        <a href="javascript:void(0)" class="hover:bg-gray-700 hover:text-white text-gray-300 block px-3 py-2 rounded-md text-base font-medium" onclick="toPrice()">Price</a>
+        <a href="javascript:void(0)" class="hover:bg-gray-700 hover:text-white text-gray-300 block px-3 py-2 rounded-md text-base font-medium" onclick="toProjects()">Projects</a>
+      </div>
+
+    </div>
+
+    </nav>
+    <main id="home" class="bg-[url('https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] h-screen bg-no-repeat bg-cover">
+        <div class="relative px-8">
+        <div class="mx-auto max-w-3x1 pt-48 pb-32">
+            <h1 class="text-5xl font-bold tracking-tight text-center bg-clip-text text-transparent bg-gradient-to-t from-cyan-500 to-cyan-300" font-size: inherit;
+            font-weight: inherit;>Data to enrich your online business</h1>
+            <p class="mt-6 text-lgr leading-8 text-gray-200 text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <div class="mt-8 flex gap-x-4 justify-center">                
+                <a href="#" class="inline-block rounded-lg bg-cyan-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-cyan-600">Learn more</a>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <div class="bg-white dark:bg-gray-700 py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl lg:text-center">
+            <h2 class="text-base font-semibold leading-7 text-indigo-600 dark:text-white" >Deploy faster</h2>
+            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl">Everything you need to deploy your app</p>
+            <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.</p>
+          </div>
+          <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900 dark:text-gray-300">
+                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+                    </svg>
+                  </div>
+                  Push to deploy
+                </dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-white">Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.</dd>
+              </div>
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900  dark:text-gray-300">
+                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                    </svg>
+                  </div>
+                  SSL certificates
+                </dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-white">Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.</dd>
+              </div>
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900  dark:text-gray-300">
+                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                    </svg>
+                  </div>
+                  Simple queues
+                </dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-white">Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.</dd>
+              </div>
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900 dark:text-gray-300">
+                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
+                    </svg>
+                  </div>
+                  Advanced security
+                </dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-white">Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+      
+
+
+
+    <section id="Testimonials" class="p-20 mb-20 text-gray-700 bg-gray-100 dark:bg-gray-900">
+        <div class="text-center mx-auto">
+            <h3 class="text-3x1 font-bold mb-6 text-gray-600 dark:text-gray-300">Testimonials</h3>
+            <p class="mb-6 pb-2 dark:text-gray-300">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div class="grid lg:grid-cols-3 text-center">
+            <div class="mb-12">
+                <div class="flex justify-center mb-6">
+                <img src="https://images.pexels.com/photos/5794945/pexels-photo-5794945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="rounded-full shadow-lg w-32">
+                </div>
+            
+            <h5 class="text-xl font-semibold mb-4 dark:text-white">Amelia Margaret</h5>
+            <h6 class="font-semibold text-blue-600 mb-4">Web developer</h6>
+            <p class="mb-4 dark:text-gray-300">
+                <svg 
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="quote-left"
+                    class="w-6 pr-2 inline-block"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                >
+                    <path
+                      fill="currentColor"
+                      d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+                    </path>
+                </svg>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+            <ul class="flex justify-center mb-0">
+                <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                    </svg>
+                </li>
+            </ul>
+            </div>
+            <div class="mb-12">
+                <div class="flex justify-center mb-6">
+                <img src="https://images.pexels.com/photos/3483800/pexels-photo-3483800.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="rounded-full shadow-lg w-32">
+                </div>
+            
+            <h5 class="text-xl font-semibold mb-4 dark:text-white">Oliver Jake</h5>
+            <h6 class="font-semibold text-blue-600 mb-4">Web developer</h6>
+            <p class="mb-4 dark:text-gray-300">
+                <svg 
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="quote-left"
+                    class="w-6 pr-2 inline-block"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                >
+                    <path
+                      fill="currentColor"
+                      d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+                    </path>
+                </svg>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+            <ul class="flex justify-center mb-0">
+                <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="far"
+                    data-icon="star"
+                    class="w-4 text-yellow-500"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"
+                    ></path>
+                  </svg>
+                </li>
+            </ul>
+            </div>
+            <div class="mb-12">
+                <div class="flex justify-center mb-6">
+                <img src="https://images.pexels.com/photos/17136147/pexels-photo-17136147/free-photo-of-th-i-trang-dan-ong-ng-i-b-d.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="rounded-full shadow-lg w-32">
+                </div>
+            
+            <h5 class="text-xl font-semibold mb-4 dark:text-white">Juan Carlos</h5>
+            <h6 class="font-semibold text-blue-600 mb-4">Web developer</h6>
+            <p class="mb-4 dark:text-gray-300">
+                <svg 
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="quote-left"
+                    class="w-6 pr-2 inline-block"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                >
+                    <path
+                      fill="currentColor"
+                      d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+                    </path>
+                </svg>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+            <ul class="flex justify-center mb-0">
+                <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="star-half-alt"
+                    class="w-4 text-yellow-500"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 536 512"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M508.55 171.51L362.18 150.2 296.77 17.81C290.89 5.98 279.42 0 267.95 0c-11.4 0-22.79 5.9-28.69 17.81l-65.43 132.38-146.38 21.29c-26.25 3.8-36.77 36.09-17.74 54.59l105.89 103-25.06 145.48C86.98 495.33 103.57 512 122.15 512c4.93 0 10-1.17 14.87-3.75l130.95-68.68 130.94 68.7c4.86 2.55 9.92 3.71 14.83 3.71 18.6 0 35.22-16.61 31.66-37.4l-25.03-145.49 105.91-102.98c19.04-18.5 8.52-50.8-17.73-54.6zm-121.74 123.2l-18.12 17.62 4.28 24.88 19.52 113.45-102.13-53.59-22.38-11.74.03-317.19 51.03 103.29 11.18 22.63 25.01 3.64 114.23 16.63-82.65 80.38z"
+                    ></path>
+                  </svg>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+
+    <div id="modal" class="relative z-[100] hidden">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75"></div>
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+        <div class="flex min-h-full items-end justify-center p-4 text-center">
+            <div class="transform overflow-hidden rounded-lg bg-white shadow-xl transition-all relative w-80 h-1/3">
+                <img class="mb-4" src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            </div>
+            <div class="mt-3 text-center">
+                <h3 class="text-2xl font-medium leading-6 text-gray-900">Advanced Features</h3>
+                <div class="mt-8 w-1/2 mx-auto">
+                    <ol class="">
+                        <li class="mb-4 flex items-center">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                            class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                              d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                            </path>
+                          </svg> Unlimited updates
+                        </li>
+                        <li class="mb-4 flex items-center">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                            class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                              d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                            </path>
+                          </svg> Git Repository
+                        </li>
+                        <li class="mb-4 flex items-center">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                            class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                              d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                            </path>
+                          </svg> npm installation
+                        </li>
+                        <li class="mb-4 flex items-center">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                            class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                              d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                            </path>
+                          </svg> Code Examples
+                        </li>
+                        <li class="mb-4 flex items-center">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                            class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                              d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                            </path>
+                          </svg> Premium snippets
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3">
+                <button type="button" class="w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 font-medium text-white shadow-sm">Checkout</button>
+                <button type="button" class="w-full mt-3 justify-center rounded-md border border-gray-300 border-transparent bg-white px-4 py-2 font-medium text-base text-gray-700 shadow-sm">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <!-- Price Section-->
+
+    <section id="Price" class="container py-24 px-6 mx-auto dark:bg-gray-700">
+        <div class="mb-32 text-gray-800">
+            <h2 class="text-3x1 font-bold text-center mb-12 dark:text-gray-300">Pricing</h2>
+            <div class="grid lg:grid-cols-3 gap-x-12">
+                <div class="mb-6">
+                    <div class="block rounded-lg shadow-lg bg-gray-200 h-full">
+                        <div class="p-6 border-b border-gray-300 text-center">
+                            <p class="mb-6 font-bold text-2xl">Basic</p>
+                            <h3 class="text-2xl mb-6">
+                                <strong>$129</strong>
+                                <small class="text-gray-500 text-sm">/year</small>
+                            </h3>
+                            <button type="button" class="inline-block px-6 py-2.5 text-xs font-medium uppercase leading-tight text-blue-500 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out w-full bg-gray-300">Buy</button>
+                        </div>
+                        <div class="p-6">
+                            <ol class="">
+                                <li class="mb-4 flex items-center">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                    class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                    </path>
+                                  </svg> Unlimited updates
+                                </li>
+                                <li class="mb-4 flex items-center">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                    class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                    </path>
+                                  </svg> Git Repository
+                                </li>
+                                <li class="mb-4 flex items-center">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                    class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                    </path>
+                                  </svg> npm installation
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <div class="block rounded-lg shadow-lg bg-gray-200 h-full">
+                        <div class="p-6 border-b border-gray-300 text-center">
+                            <p class="mb-6 font-bold text-2xl">Advanced</p>
+                            <h3 class="text-2xl mb-6">
+                                <strong>$229</strong>
+                                <small class="text-gray-500 text-sm">/year</small>
+                            </h3>
+                            <button type="button" class="inline-block px-6 py-2.5 text-xs font-medium uppercase leading-tight text-blue-500 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out w-full bg-gray-300">Buy</button>
+                        </div>
+                        <div class="p-6">
+                            <ol class="">
+                                <li class="mb-4 flex items-center">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                    class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                    </path>
+                                  </svg> Unlimited updates
+                                </li>
+                                <li class="mb-4 flex items-center">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                    class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                    </path>
+                                  </svg> Git Repository
+                                </li>
+                                <li class="mb-4 flex items-center">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                    class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                    </path>
+                                  </svg> npm installation
+                                </li>
+                                <li class="mb-4 flex items-center">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                    class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                    </path>
+                                  </svg> Code Examples
+                                </li>
+                                <li class="mb-4 flex items-center">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                    class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                    </path>
+                                  </svg> Premium snippets
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <div class="block rounded-lg shadow-lg bg-gray-200 h-full">
+                        <div class="p-6 border-b border-gray-300 text-center">
+                            <p class="mb-6 font-bold text-2xl">Enterprice</p>
+                            <h3 class="text-2xl mb-6">
+                                <strong>$499</strong>
+                                <small class="text-gray-500 text-sm">/year</small>
+                            </h3>
+                            <button type="button" class="inline-block px-6 py-2.5 text-xs font-medium uppercase leading-tight text-blue-500 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out w-full bg-gray-300">Buy</button>
+                        </div>
+                        <div class="p-6">
+                            <ol class="">
+                                <li class="mb-4 flex items-center">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                    class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                    </path>
+                                  </svg> Unlimited updates
+                                </li>
+                                <li class="mb-4 flex items-center">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                    class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                    </path>
+                                  </svg> Git Repository
+                                </li>
+                                <li class="mb-4 flex items-center">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                    class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                    </path>
+                                  </svg> npm installation
+                                </li>
+                                <li class="mb-4 flex items-center">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                    class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                    </path>
+                                  </svg> Code Examples
+                                </li>
+                                <li class="mb-4 flex items-center">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                    class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                    </path>
+                                  </svg> Premium snippets
+                                </li>
+                                <li class="mb-4 flex items-center">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                    class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                    </path>
+                                  </svg> Premium support
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project section -->
+    <section id="Projects" class="overflow-hidden text-gray-700 bg-gray-100 dark:bg-gray-800">
+        <div class="container px-5 py-20 max-auto">
+            <div class="text-center max-w-3xl mx-auto">
+                <h3 class="text-3xl font-bold mb-6 text-gray-800 dark:text-white">Projects</h3>
+                <p class="mb-6 pb-2 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+
+            <div class="flex flex-wrap">
+                <div class="flex flex-wrap w-1/3">
+                    <div class="w-full p-1">
+                        <img alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg" src="https://images.pexels.com/photos/4559555/pexels-photo-4559555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                    </div>
+                </div>
+                <div class="flex flex-wrap w-1/3">
+                    <div class="w-full p-1">
+                        <img alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg" src="https://images.pexels.com/photos/6373289/pexels-photo-6373289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                    </div>
+                </div>
+                <div class="flex flex-wrap w-1/3">
+                    <div class="w-full p-1">
+                        <img alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg" src="https://images.pexels.com/photos/5999876/pexels-photo-5999876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                    </div>
+                </div>
+                <div class="flex flex-wrap w-1/3">
+                    <div class="w-full p-1">
+                        <img alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg" src="https://images.pexels.com/photos/3760089/pexels-photo-3760089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                    </div>
+                </div>
+                <div class="flex flex-wrap w-1/3">
+                    <div class="w-full p-1">
+                        <img alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg" src="https://images.pexels.com/photos/9429448/pexels-photo-9429448.jpeg?auto=compress&cs=tinysrgb&w=1600">
+                    </div>
+                </div>
+                <div class="flex flex-wrap w-1/3">
+                    <div class="w-full p-1">
+                        <img alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg" src="https://images.pexels.com/photos/6373290/pexels-photo-6373290.jpeg?auto=compress&cs=tinysrgb&w=1600">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="bg-white h-screen mt-10">
+      <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">
+          Contact Us
+        </h2>
+        <p class="mb-8 lg:mg-16 font-light text-center text-gray-500 sm:text-xl">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+        <form id="form" action="https://api.web3forms.com/submit" method="POST" class="space-y-8">
+
+          <!--Validation-->
+          <input type="hidden" name="access_key" value="652685bd-bc46-4293-ab4d-ed47462b2d30">
+          <input type="hidden" name="subject" value="New submission from your website">
+
+          <div>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+            <input type="email" id="email" name="email" placeholder="name@email.com" class="shadow-sm bg-gray-50 border rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+          </div>
+          <div>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="let us know how we can help you" class="shadow-sm bg-gray-50 border rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your message</label>
+            <textarea id="message" name="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 forcus:ring-blue-500 focus:border-blue-500" placeholder="Leave a comment"></textarea>
+          </div>
+          <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-700 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">Send message</button>
+
+        </form>
+      </div>
+    </section>
+      
+    <!--Box in the grid: Side bar-->
+    
+    <div class="flex w-full flex-row flex-wrap">
+      <div class="h-0 w-0 overflow-y-hidden bg-white shadow-lg md:h-screen md:w-1/4 lg:w-1/5">
+        <div class="sticky top-0 bg-white p-5">
+          <img class="rounded-full border border-indigo-100 shadown-lg" src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <div class="mt-5 w-full border-t pt-2 text-center text-xl text-gray-600">John Smith</div>
+          <div class="flex h-screen w-full flex-col hover:cursor-pointer">
+            <a class="w-full border-t-2 bg-gray-200 p-3 text-left text-xl font-semibold text-gray-600 hover:bg-gray-300">
+              <i class="fa fa-comment float-right pr-1 pt-1 text-2xl text-gray-600" aria-hidden="true">Message</i>
+            </a>
+            <a class="w-full border-t-2 bg-gray-200 p-3 text-left text-xl font-semibold text-gray-600 hover:bg-gray-300">
+              <i class="fa fa-cog float-right pr-1 pt-1 text-2xl text-gray-600" aria-hidden="true">Settings</i>
+            </a>
+            <a class="w-full border-t-2 bg-gray-200 p-3 text-left text-xl font-semibold text-gray-600 hover:bg-gray-300">
+              <i class="fa fa-sign-out float-right pr-1 pt-1 text-2xl text-gray-600" aria-hidden="true">Logout</i>
+            </a>
+          </div>
+        </div>
+
+    
+    
+
+      </div>
+
+        <!--Box in the grid: Social Media Contents-->
+        <div class="lg:24 h-full w-full overflow-x-scroll p-5 md:3/4 md:px-12 lg:w-4/5">
+          <div class="w-full rounded-lg bg-white p-5 shadow">
+            <textarea class="w-full rounded-lg border bg-gray-200 p-2 shadow" rows="5" placeholder="Speak your mind"></textarea>
+
+            <div class="mt-3 w-full grid grid-cols-2">
+              <div class="col-start-1 col-end-1">
+                <select class="float-left w-full rounded-lg border bg-gray-200 p-2 shadow">
+                  <option>Public</option>
+                  <option>Private</option>
+                </select>
+              </div>    
+
+              <div class="col-end-5 col-span-1">
+                <button type="button" class="float-right rounded-lg bg-indigo-400 p-2 text-white hover:bg-indigo-300">Submit</button>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="mt-3 flex flex-col">
+            <div class="mt-3 bg-white">
+              <img class="rounded-t-lg border shadow-lg" src="https://images.pexels.com/photos/1013516/pexels-photo-1013516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+      
+              <div class="border bt-white p-5 text-xl font-semibold text-gray-700 shadow">Very beautiful photo. Image credit to @David Marcu</div>
+              <div class="flex flex-row flex-wrap border bg-white p-1 shadow">
+                <div class="w-1/3 text-center text-xl font-semibold text-gray-700 hover:bg-gray-200">Like</div>
+                <div class="border-1-4 w-1/3 text-center text-xl font-semibold text-gray-700 hover:bg-gray-200">Share</div>
+                <div class="border-1-4 w-1/3 text-center text-xl font-semibold text-gray-700 hover:bg-gray-200">Comment</div>
+              </div>
+              
+          <div class="flex flex-row flex-wrap content-center rounded-b-lg border-4 border-white bg-white p-5 text-xl font-semibold text-gray-700 shadow">
+            <div class="w-full">
+              <div class="w-full text-left text-xl text-gray-600">@some person</div>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div>
+          </div>
+          </div>
+          </div>
+          <div class="mt-3 flex flex-col">
+            <div class="mt-3 bg-white">
+              <img class="rounded-t-lg border shadow-lg" src="https://images.pexels.com/photos/1013516/pexels-photo-1013516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+      
+              <div class="border bt-white p-5 text-xl font-semibold text-gray-700 shadow">Very beautiful photo. Image credit to @David Marcu</div>
+              <div class="flex flex-row flex-wrap border bg-white p-1 shadow">
+                <div class="w-1/3 text-center text-xl font-semibold text-gray-700 hover:bg-gray-200">Like</div>
+                <div class="border-1-4 w-1/3 text-center text-xl font-semibold text-gray-700 hover:bg-gray-200">Share</div>
+                <div class="border-1-4 w-1/3 text-center text-xl font-semibold text-gray-700 hover:bg-gray-200">Comment</div>
+              </div>
+              
+          <div class="flex flex-row flex-wrap content-center rounded-b-lg border-4 border-white bg-white p-5 text-xl font-semibold text-gray-700 shadow">
+            <div class="w-full">
+              <div class="w-full text-left text-xl text-gray-600">@some person</div>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div>
+          </div>
+          </div>
+          </div>
+        </div>
+
+    </div>
+
+    
+
+
+    <footer class="text-center bg-gray-800 text-white">
+        <div class="px-6 pt-6">
+            <div>
+                <a href="#" type="button" class="rounded-full border-2 border-white text-white leading-normal focus:ring-0 focus:outline-none w-9 h-9 m-1 uppercase">  
+                    <svg aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fab"
+                    data-icon="facebook-f"
+                    class="w-2 h-full mx-auto"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 320 512"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                    ></path>
+                    </svg>
+                </a>
+                <a href="#" type="button" class="rounded-full border-2 border-white text-white leading-normal focus:ring-0 focus:outline-none w-9 h-9 m-1 uppercase">  
+                    <svg aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fab"
+                        data-icon="twitter"
+                        class="w-3 h-full mx-auto"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        >
+                    <path
+                    fill="currentColor"
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                    ></path>
+              </svg>
+                </a>
+                <a href="#" type="button" class="rounded-full border-2 border-white text-white leading-normal focus:ring-0 focus:outline-none w-9 h-9 m-1 uppercase">  
+                    <svg aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fab"
+                      data-icon="google"
+                      class="w-3 h-full mx-auto"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 488 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+                      ></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <!-- Email Suscribe Section-->
+        <div>
+            <form> 
+                <div class="grid grid-cols-3 flex gap-4 justify-center items-center mb-4">
+                    <div class="ml-auto mb-6">
+                        <p class="font-bold">Sign up for our newsletter</p>
+                    </div>
+                    <div>
+                        <input 
+                        type="text"
+                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded" 
+                        placeholder="Email address"
+                        >
+                    </div>
+                    <div>
+                        <button type="submit" class="inline-block px-6 py-2 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded">
+                            Subscribe 
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="mx-auto mb-6 w-1/2">
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+        </div>
+        <div class="bg-gray-900 text-white p-4">
+            © 2023 Copyright: <a href="#">Tailwind CSS</a>
+        </div>
+    </footer>
+
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
